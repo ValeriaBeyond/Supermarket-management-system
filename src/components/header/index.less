@@ -1,0 +1,49 @@
+.header{
+    height: 80px;
+    background-color: white;
+    .header-top{
+        height: 40px;
+        line-height: 40px;
+        padding-right: 30px;
+        text-align: right;
+        border-bottom: 1px solid #1DA57A;
+        span{
+            padding-right: 10px;
+        }
+    }
+    .header-bottom{
+        display: flex;
+        min-height: 40px;
+        align-items: center;
+        
+        .header-bottom-left{
+            font-size: 20px;
+            text-align: center;
+            width: 25%;
+            // 
+            position: relative;
+            &::after{
+                position:absolute;
+                content: '';
+                left:50%;   // 该伪元素的最左侧在其父元素宽度的50%处
+                top:90%;   // 该伪元素的最上侧在其父元素高度的100%处
+                transform: translateX(-20px);
+                
+                border-top: 20px solid white;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 20px solid transparent;
+            }
+        }
+        .header-bottom-right{
+            width: 75%;
+            padding-right: 30px;
+            text-align: right;
+            span{
+                margin: 0 15px;
+                width: 30px;
+                height: 20px;
+            }
+        }
+    }
+}
